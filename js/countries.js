@@ -12,11 +12,12 @@ const displayCountries = (countries) => {
 
     container.innerHTML = countriesHTML.join(' ');
 }
-const getCountryHTML = country => {
+const getCountryHTML = ({ name, flags, area }) => {
     return `
-    <div>
-        <h3> ${country.name} </h3>
-        <img src="${country.flags.png}"></img>
+    <div class="country">
+        <h3> ${name} </h3>
+        <p> ${area} <p/>
+        <img src="${flags.png}"></img>
     </div>
     `
 }
